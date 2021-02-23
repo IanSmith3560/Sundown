@@ -1,0 +1,21 @@
+---
+title: "Sundown Town Project"
+author: "Ian & Alex Smith"
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# include libraries
+library(tidyverse) # always a good one to have
+library(haven) # needed to read .dta files
+```
+
+```{r import_dta}
+# breakdown of county population from 1900 census on
+# DOES NOT INCLUDE RACIAL INFORMATION
+cencounts <- read_dta("./cencounts.dta")
+```
+
