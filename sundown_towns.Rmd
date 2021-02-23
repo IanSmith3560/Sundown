@@ -10,12 +10,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # include libraries
 library(tidyverse) # always a good one to have
-library(haven) # needed to read .dta files
+library(readxl) # for reading in Excel files
+
+# library(haven) # needed to read .dta files
 ```
 
 ```{r import_dta}
+
+acs_excel <- read_excel("ACSDP1Y2019.DP05-2021-02-23T035142.xlsx", sheet = "Data")
+
+
 # breakdown of county population from 1900 census on
 # DOES NOT INCLUDE RACIAL INFORMATION
-cencounts <- read_dta("./cencounts.dta")
+# cencounts <- read_dta("./cencounts.dta")
 ```
 
